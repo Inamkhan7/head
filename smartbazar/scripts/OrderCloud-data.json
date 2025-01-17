@@ -1,0 +1,66 @@
+{
+  "Objects": {
+    "SecurityProfiles": [],
+    "ImpersonationConfigs": [],
+    "OpenIdConnects": [],
+    "AdminUsers": [],
+    "AdminUserGroups": [],
+    "AdminAddresses": [],
+    "MessageSenders": [],
+    "ApiClients": [],
+    "Incrementors": [],
+    "Webhooks": [],
+    "IntegrationEvents": [],
+    "XpIndices": [],
+    "Buyers": [
+      {
+        "ID": "easy-shop",
+        "Name": "Easy shop",
+        "DefaultCatalogID": "easy-shop",
+        "Active": true,
+        "DateCreated": "2021-10-06T18:06:06.76+00:00",
+        "xp": null
+      }
+    ],
+    "Users": [],
+    "UserGroups": [],
+    "Addresses": [],
+    "CostCenters": [],
+    "CreditCards": [],
+    "SpendingAccounts": [],
+    "ApprovalRules": [],
+    "Catalogs": [
+      {
+        "ID": "easy-shop",
+        "Name": "easy-shop",
+        "Description": "Default catalog",
+        "Active": true
+      }
+    ],
+    "Categories": [],
+    "Suppliers": [],
+    "Products": [],
+    "PriceSchedules": [],
+    "Specs": [],
+    "SpecOptions": [],
+    "ProductFacets": [],
+    "Promotions": []
+  },
+  "Assignments": {
+    "UserGroupAssignments": [],
+    "SpendingAccountAssignments": [],
+    "AddressAssignments": [],
+    "CostCenterAssignments": [],
+    "CreditCardAssignments": [],
+    "CategoryAssignments": [],
+    "CategoryProductAssignments": [],
+    "SecurityProfileAssignments": [],
+    "AdminUserGroupAssignments": [],
+    "ApiClientAssignments": [],
+    "ProductAssignments": [],
+    "CatalogAssignments": [],
+    "ProductCatalogAssignment": [],
+    "SpecProductAssignments": [],
+    "PromotionAssignment": []
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "declarationDir": "./dist",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "declaration": true,
+    "esModuleInterop": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "removeComments": true
+  },
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "excludeExternals": true,
+    "out": "docs",
+    "name": "@packages/commerce",
+    "theme": "default",
+    "internalModule": "Resources",
+    "readme": "none"
+  }
+}

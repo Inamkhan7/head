@@ -1,0 +1,9 @@
+{
+  "sitecore": {
+    "instancePath": "",
+    "apiKey": "{9BFA902A-2E1F-402E-BE36-A1BE97F2A68D}",
+    "deploySecret": "p0hjpb84f5hsfj7ar1llwdv2lv3j8as7y03ip1dhr",
+    "deployUrl": "https://altudoheadless-sccontent.eastus.cloudapp.azure.com/sitecore/api/jss/import",
+    "layoutServiceHost": "https://altudoheadless-sccontent.eastus.cloudapp.azure.com"
+  }
+}

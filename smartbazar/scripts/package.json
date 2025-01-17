@@ -1,0 +1,14 @@
+{
+  "name": "schema-generator",
+  "license": "MIT",
+  "description": "",
+  "scripts": {
+    "seed": "ts-node seed.ts"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "ordercloud-javascript-sdk": "^4.10.1",
+    "yaml": "^2.1.1",
+    "yarg": "^1.0.8"
+  }
+}

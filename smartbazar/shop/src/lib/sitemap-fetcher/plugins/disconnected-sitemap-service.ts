@@ -1,0 +1,45 @@
+import { DisconnectedSitemapService } from '@sitecore-jss/sitecore-jss-nextjs';
+import { ManifestInstance } from '@sitecore-jss/sitecore-jss-dev-tools';
+import { SitemapFetcherPlugin } from '..';
+
+class DisconnectedSitemapServicePlugin implements SitemapFetcherPlugin {
+  _disconnectedSitemapService: DisconnectedSitemapService;
+
+  constructor() {
+    this._disconnectedSitemapService = new DisconnectedSitemapService(
+      this.getManifest() as unknown as ManifestInstance
+    );
+  }
+
+  /**
+   * Get sitecore-import.json manifest
+   */
+  getManifest() {
+    if (process.env.JSS_MODE !== 'disconnected') return null;
+
+    try {
+      const manifest = require('sitecore/manifest/sitecore-import.json');
+
+      return manifest;
+    } catch (error) {
+      throw Error(
+        "[Disconnected Export] Please make sure you've started the disconnected proxy `npm run start:disconnected-proxy`"
+      );
+    }
+  }
+
+  async exec() {
+    // If we are in Export mode
+    if (process.env.EXPORT_MODE) {
+      // Disconnected Export mode
+      if (process.env.JSS_MODE === 'disconnected') {
+        return this._disconnectedSitemapService.fetchExportSitemap();
+      }
+    }
+
+    return [];
+  }
+}
+
+export const disconnectedSitemapServicePlugin =
+  new DisconnectedSitemapServicePlugin();

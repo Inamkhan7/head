@@ -1,0 +1,6 @@
+{
+    "chatConfigKeys":{
+        "AzureStorageAccountEndpoint":"https://northwindhealth.blob.core.windows.net/",
+        "AzureStorageContainer":"northwindhealth"
+    }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "smart-bazar",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "author": "Azar Safarov",
+  "workspaces": [
+    "admin/*",
+    "api/*",
+    "shop",
+    "landing",
+    "packages/*"
+  ],
+  "scripts": {
+    "clean": "yarn workspaces run rimraf --glob \"{.next,node_modules,__generated__,.cache,src/graphql/*.d.ts,src/framework/graphql/**/*.d.ts}\" && rimraf node_modules",
+    "gql-clean": "yarn workspaces run rimraf --glob \"{__generated__,src/graphql/*.d.ts,src/framework/graphql/**/*.d.ts}\"",
+    "dev:shop-rest": "yarn workspace @smart-bazar/shop dev:rest",
+    "build:shop-rest": "yarn workspace @smart-bazar/shop build:rest",
+    "start:shop-rest": "yarn workspace @smart-bazar/shop start",
+    "dev:admin-rest": "concurrently --kill-others \"yarn workspace @smart-bazar/api-rest start:dev\" \"yarn workspace @smart-bazar/admin-rest dev\"",
+    "build:admin-rest": "yarn workspace @smart-bazar/admin-rest build",
+    "start:admin-rest": "yarn workspace @smart-bazar/admin-rest start",
+    "dev:shop-gql": "yarn workspace @smart-bazar/shop dev:gql",
+    "build:shop-gql": "yarn workspace @smart-bazar/shop build:gql",
+    "start:shop-gql": "yarn workspace @smart-bazar/shop start",
+    "dev:admin-gql": "yarn workspace @smart-bazar/admin-graphql dev",
+    "build:admin-gql": "yarn workspace @smart-bazar/admin-graphql build",
+    "start:admin-gql": "yarn workspace @smart-bazar/admin-graphql start",
+    "build:api": "yarn build:packages && yarn workspace @smart-bazar/api-rest build",
+    "start:api": "yarn workspace @smart-bazar/api-rest start:dev",
+    "start:all": "concurrently --kill-others \"yarn workspace @smart-bazar/api-rest start:dev \" \"yarn workspace @smart-bazar/shop dev:rest \"",
+    "build:packages:commerce": "yarn workspace @packages/commerce build:n:check",
+    "build:packages:ordercloud": "yarn workspace @packages/ordercloud build:n:check",
+    "build:packages:bigcommerce": "yarn workspace @packages/bigcommerce build:n:check",
+    "build:packages:commercetools": "yarn workspace @packages/commercetools build:n:check",
+    "build:packages": "yarn build:packages:commerce && yarn build:packages:ordercloud && yarn build:packages:bigcommerce && yarn build:packages:commercetools",
+    "azure-fn-fix": "yarn workspace @smart-bazar/api-rest copy:packs",
+    "azure-build": "yarn workspace @packages/commerce build && yarn workspace @packages/ordercloud build && yarn workspace @packages/bigcommerce build && yarn workspace @smart-bazar/api-rest copy:packs && yarn workspace @smart-bazar/api-rest build"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.3",
+    "rimraf": "^4.0.5"
+  },
+  "dependencies": {
+    "@azure/search-documents": "12.0.0-beta.3",
+    "@dqbd/tiktoken": "1.0.15",
+    "@google/generative-ai": "^0.17.1",
+    "class-transformer": "^0.5.1",
+    "fastify": "4.27.0",
+    "openai": "4.51.0",
+    "tealium": "^5.0.3"
+  }
+}

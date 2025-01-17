@@ -1,0 +1,227 @@
+Objects:
+  SecurityProfiles:
+    - ID: anonymous-shopper
+      Name: Anonymous Shopper
+      Roles:
+        - BuyerReader
+        - BuyerUserReader
+        - CatalogReader
+        - CategoryReader
+        - MeAddressAdmin
+        - MeAdmin
+        - MeCreditCardAdmin
+        - MeXpAdmin
+        - OrderReader
+        - OverrideShipping
+        - OverrideTax
+        - OverrideUnitPrice
+        - PasswordReset
+        - ProductReader
+        - Shopper
+      CustomRoles: []
+      PasswordConfig: null
+    - ID: full-access-admin
+      Name: Full Access Admin
+      Roles:
+        - FullAccess
+      CustomRoles: []
+      PasswordConfig: null
+  ImpersonationConfigs: []
+  OpenIdConnects: []
+  AdminUsers:
+    - ID: integrations-default-context-user
+      Username: default-context-user
+      Password: null
+      FirstName: Default
+      LastName: Context
+      Email: default@context.com
+      Phone: null
+      TermsAccepted: null
+      Active: true
+      xp: null
+      AvailableRoles:
+        - FullAccess
+      DateCreated: '2021-10-06T18:06:04.253+00:00'
+      PasswordLastSetDate: null
+  AdminUserGroups: []
+  AdminAddresses: []
+  MessageSenders: []
+  ApiClients:
+    - ID: 9a3ff470-6db7-47e0-9462-93e6b7b37e37
+      ClientSecret: null
+      AccessTokenDuration: 600
+      Active: true
+      AppName: Storefront Connector
+      RefreshTokenDuration: 43200
+      DefaultContextUserName: anonymous-shopper
+      xp: null
+      AllowAnyBuyer: false
+      AllowAnySupplier: false
+      AllowSeller: false
+      IsAnonBuyer: true
+      AssignedBuyerCount: 1
+      AssignedSupplierCount: 0
+      OrderCheckoutIntegrationEventID: null
+      OrderCheckoutIntegrationEventName: null
+      MinimumRequiredRoles: []
+      MinimumRequiredCustomRoles: []
+      MaximumGrantedRoles: []
+      MaximumGrantedCustomRoles: []
+    - ID: 9d295e2f-0f49-4626-ba49-5a46829db2a8
+      ClientSecret: null
+      AccessTokenDuration: 600
+      Active: true
+      AppName: Back Office App
+      RefreshTokenDuration: 5760
+      DefaultContextUserName: null
+      xp: null
+      AllowAnyBuyer: false
+      AllowAnySupplier: true
+      AllowSeller: true
+      IsAnonBuyer: false
+      AssignedBuyerCount: 0
+      AssignedSupplierCount: 0
+      OrderCheckoutIntegrationEventID: null
+      OrderCheckoutIntegrationEventName: null
+      MinimumRequiredRoles: []
+      MinimumRequiredCustomRoles: []
+      MaximumGrantedRoles: []
+      MaximumGrantedCustomRoles: []
+    - ID: ea3e6969-2765-404c-ad45-e281318876c3
+      ClientSecret: <Redacted. Leave unchanged.>
+      AccessTokenDuration: 600
+      Active: true
+      AppName: Middleware Connector
+      RefreshTokenDuration: 43200
+      DefaultContextUserName: default-context-user
+      xp: null
+      AllowAnyBuyer: false
+      AllowAnySupplier: false
+      AllowSeller: true
+      IsAnonBuyer: false
+      AssignedBuyerCount: 0
+      AssignedSupplierCount: 0
+      OrderCheckoutIntegrationEventID: null
+      OrderCheckoutIntegrationEventName: null
+      MinimumRequiredRoles: []
+      MinimumRequiredCustomRoles: []
+      MaximumGrantedRoles: []
+      MaximumGrantedCustomRoles: []
+  Incrementors: []
+  Webhooks: []
+  IntegrationEvents: []
+  XpIndices: []
+  Buyers:
+    - ID: tyson-foods
+      Name: Tyson Foods
+      DefaultCatalogID: tyson-foods
+      Active: true
+      DateCreated: '2021-10-06T18:06:06.76+00:00'
+      xp: null  
+  Users:
+    - ID: default-anonymous-shopper
+      Username: anonymous-shopper
+      Password: null
+      FirstName: anonymous
+      LastName: shopper
+      Email: anonymous-shopper@email.com
+      Phone: null
+      TermsAccepted: null
+      Active: true
+      xp:
+        something: else
+      AvailableRoles:
+        - BuyerReader
+        - BuyerUserReader
+        - CatalogReader
+        - CategoryReader
+        - MeAddressAdmin
+        - MeAdmin
+        - MeCreditCardAdmin
+        - MeXpAdmin
+        - OrderReader
+        - OverrideShipping
+        - OverrideTax
+        - OverrideUnitPrice
+        - PasswordReset
+        - ProductReader
+        - Shopper
+      DateCreated: '2021-10-06T14:08:33.923+00:00'
+      PasswordLastSetDate: null
+      BuyerID: tyson-foods
+  UserGroups:
+    - ID: tyson-foods-shoppers
+      Name: Grocery clients
+      Description: null
+      xp: null
+      BuyerID: tyson-foods
+  Addresses: []
+  CostCenters: []
+  CreditCards: []
+  SpendingAccounts: []
+  ApprovalRules: []
+  Catalogs:
+    - ID: tyson-foods
+      OwnerID: <MarketplaceID placeholder>
+      Name: Tyson Foods
+      Description: null
+      Active: true
+      CategoryCount: 3
+      xp:
+        logo:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665701169/nlh7vduiiehpn0a4gwdk.png
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665701169/nlh7vduiiehpn0a4gwdk.png
+          id: nlh7vduiiehpn0a4gwdk
+        settings:
+          isHome: false
+          productCard: neon
+          layoutType: classic
+          group: Tyson Foods
+        promotional_sliders: []
+        banners:
+          - title: Best from our farms
+            description: Farmhouse Quality Sowed Deep in Our Roots
+            image:
+              id: pilagoyg4n6oefkvd4yc
+              thumbnail: >-
+                https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665701923/pilagoyg4n6oefkvd4yc.png
+              original: >-
+                https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665701923/pilagoyg4n6oefkvd4yc.png
+  Categories: []
+  Suppliers: []
+  Products: []
+  Specs: []
+  SpecOptions: []
+  ProductFacets: []
+  Promotions: []
+Assignments:
+  UserGroupAssignments: []
+  SpendingAccountAssignments: []
+  AddressAssignments: []
+  CostCenterAssignments: []
+  CreditCardAssignments: []
+  CategoryAssignments: []
+  CategoryProductAssignments: []
+  SecurityProfileAssignments:
+    - SecurityProfileID: anonymous-shopper
+      BuyerID: tyson-foods
+      SupplierID: null
+      UserID: null
+      UserGroupID: null
+    - SecurityProfileID: full-access-admin
+      BuyerID: null
+      SupplierID: null
+      UserID: null
+      UserGroupID: null
+  AdminUserGroupAssignments: []
+  ApiClientAssignments:
+    - ApiClientID: 9a3ff470-6db7-47e0-9462-93e6b7b37e37
+      BuyerID: tyson-foods
+      SupplierID: null
+  ProductAssignments: []
+  CatalogAssignments: []
+  ProductCatalogAssignment: []
+  SpecProductAssignments: []
+  PromotionAssignment: []

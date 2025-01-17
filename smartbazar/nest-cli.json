@@ -1,0 +1,8 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "api/rest/src",
+  "compilerOptions": {
+    "tsConfigPath": "api/rest/tsconfig.json",
+    "plugins": ["@nestjs/swagger"]
+  }
+}

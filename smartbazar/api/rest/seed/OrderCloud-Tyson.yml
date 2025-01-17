@@ -1,0 +1,1217 @@
+Objects:
+  SecurityProfiles:
+    - ID: anonymous-shopper
+      Name: Anonymous Shopper
+      Roles:
+        - BuyerReader
+        - BuyerUserReader
+        - CatalogReader
+        - CategoryReader
+        - MeAddressAdmin
+        - MeAdmin
+        - MeCreditCardAdmin
+        - MeXpAdmin
+        - OrderReader
+        - OverrideShipping
+        - OverrideTax
+        - OverrideUnitPrice
+        - PasswordReset
+        - ProductReader
+        - Shopper
+      CustomRoles: []
+      PasswordConfig: null
+    - ID: full-access-admin
+      Name: Full Access Admin
+      Roles:
+        - FullAccess
+      CustomRoles: []
+      PasswordConfig: null
+  ImpersonationConfigs: []
+  OpenIdConnects: []
+  AdminUsers:
+    - ID: integrations-default-context-user
+      Username: default-context-user
+      Password: null
+      FirstName: Default
+      LastName: Context
+      Email: default@context.com
+      Phone: null
+      TermsAccepted: null
+      Active: true
+      xp: null
+      AvailableRoles:
+        - FullAccess
+      DateCreated: '2021-10-06T18:06:04.253+00:00'
+      PasswordLastSetDate: null
+  AdminUserGroups: []
+  AdminAddresses: []
+  MessageSenders: []
+  ApiClients:
+    - ID: 9a3ff470-6db7-47e0-9462-93e6b7b37e37
+      ClientSecret: null
+      AccessTokenDuration: 600
+      Active: true
+      AppName: Storefront Connector
+      RefreshTokenDuration: 43200
+      DefaultContextUserName: anonymous-shopper
+      xp: null
+      AllowAnyBuyer: false
+      AllowAnySupplier: false
+      AllowSeller: false
+      IsAnonBuyer: true
+      AssignedBuyerCount: 1
+      AssignedSupplierCount: 0
+      OrderCheckoutIntegrationEventID: null
+      OrderCheckoutIntegrationEventName: null
+      MinimumRequiredRoles: []
+      MinimumRequiredCustomRoles: []
+      MaximumGrantedRoles: []
+      MaximumGrantedCustomRoles: []
+    - ID: 9d295e2f-0f49-4626-ba49-5a46829db2a8
+      ClientSecret: null
+      AccessTokenDuration: 600
+      Active: true
+      AppName: Back Office App
+      RefreshTokenDuration: 5760
+      DefaultContextUserName: null
+      xp: null
+      AllowAnyBuyer: false
+      AllowAnySupplier: true
+      AllowSeller: true
+      IsAnonBuyer: false
+      AssignedBuyerCount: 0
+      AssignedSupplierCount: 0
+      OrderCheckoutIntegrationEventID: null
+      OrderCheckoutIntegrationEventName: null
+      MinimumRequiredRoles: []
+      MinimumRequiredCustomRoles: []
+      MaximumGrantedRoles: []
+      MaximumGrantedCustomRoles: []
+    - ID: ea3e6969-2765-404c-ad45-e281318876c3
+      ClientSecret: <Redacted. Leave unchanged.>
+      AccessTokenDuration: 600
+      Active: true
+      AppName: Middleware Connector
+      RefreshTokenDuration: 43200
+      DefaultContextUserName: default-context-user
+      xp: null
+      AllowAnyBuyer: false
+      AllowAnySupplier: false
+      AllowSeller: true
+      IsAnonBuyer: false
+      AssignedBuyerCount: 0
+      AssignedSupplierCount: 0
+      OrderCheckoutIntegrationEventID: null
+      OrderCheckoutIntegrationEventName: null
+      MinimumRequiredRoles: []
+      MinimumRequiredCustomRoles: []
+      MaximumGrantedRoles: []
+      MaximumGrantedCustomRoles: []
+  Incrementors: []
+  Webhooks: []
+  IntegrationEvents: []
+  XpIndices: []
+  Buyers:
+    - ID: tyson
+      Name: Tyson Foods
+      DefaultCatalogID: hillshire-farm
+      Active: true
+      DateCreated: '2021-10-06T18:06:06.76+00:00'
+      xp: null  
+  Users:
+    - ID: default-anonymous-shopper
+      Username: anonymous-shopper
+      Password: null
+      FirstName: anonymous
+      LastName: shopper
+      Email: anonymous-shopper@email.com
+      Phone: null
+      TermsAccepted: null
+      Active: true
+      xp:
+        something: else
+      AvailableRoles:
+        - BuyerReader
+        - BuyerUserReader
+        - CatalogReader
+        - CategoryReader
+        - MeAddressAdmin
+        - MeAdmin
+        - MeCreditCardAdmin
+        - MeXpAdmin
+        - OrderReader
+        - OverrideShipping
+        - OverrideTax
+        - OverrideUnitPrice
+        - PasswordReset
+        - ProductReader
+        - Shopper
+      DateCreated: '2021-10-06T14:08:33.923+00:00'
+      PasswordLastSetDate: null
+      BuyerID: tyson
+  UserGroups:
+    - ID: tyson-shoppers
+      Name: Grocery clients
+      Description: null
+      xp: null
+      BuyerID: tyson
+  Addresses: []
+  CostCenters: []
+  CreditCards: []
+  SpendingAccounts: []
+  ApprovalRules: []
+  Catalogs:
+    - ID: hillshire-farm
+      OwnerID: <MarketplaceID placeholder>
+      Name: Hillshire Farm
+      Description: null
+      Active: true
+      CategoryCount: 3
+      xp:
+        logo:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665701169/nlh7vduiiehpn0a4gwdk.png
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665701169/nlh7vduiiehpn0a4gwdk.png
+          id: nlh7vduiiehpn0a4gwdk
+        icon: Bakery
+        settings:
+          isHome: false
+          productCard: neon
+          layoutType: classic
+          group: Tyson foods
+        promotional_sliders: []
+        banners:
+          - title: Best from our farms
+            description: Farmhouse Quality Sowed Deep in Our Roots
+            image:
+              id: pilagoyg4n6oefkvd4yc
+              thumbnail: >-
+                https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665701923/pilagoyg4n6oefkvd4yc.png
+              original: >-
+                https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665701923/pilagoyg4n6oefkvd4yc.png
+  Categories:
+    - ID: deli-lunch-meats
+      Name: Deli Lunch Meats
+      Description: ''
+      ListOrder: 1
+      Active: true
+      ParentID: null
+      ChildCount: 0
+      xp:
+        icon: FruitsVegetable
+        image:
+          id: jdpva3bcceb2l0faqdcs
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665746088/jdpva3bcceb2l0faqdcs.webp
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665746088/jdpva3bcceb2l0faqdcs.webp
+      CatalogID: hillshire-farm
+    - ID: smoked-sausages
+      Name: Smoked Sausages
+      Description: ''
+      ListOrder: 2
+      Active: true
+      ParentID: null
+      ChildCount: 0
+      xp:
+        icon: MeatFish
+        image:
+          id: xytugbvzrbambhaohvbn
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745179/xytugbvzrbambhaohvbn.webp
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745179/xytugbvzrbambhaohvbn.webp
+      CatalogID: hillshire-farm
+    - ID: kids-snacks
+      Name: Kids Snacks
+      Description: ''
+      ListOrder: 3
+      Active: true
+      ParentID: null
+      ChildCount: 0
+      xp:
+        icon: Breakfast
+        image:
+          id: ie6dwkmymus9xjz5zah3
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745364/ie6dwkmymus9xjz5zah3.png
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745364/ie6dwkmymus9xjz5zah3.png
+      CatalogID: hillshire-farm
+  Suppliers: []
+  Products:
+    - OwnerID: <MarketplaceID placeholder>
+      DefaultPriceScheduleID: >-
+        hillshire-farm-snacked-pepperoni-and-monterey-jack-cheese-snack-pack-with-brownie-bites
+      AutoForward: false
+      ID: >-
+        hillshire-farm-snacked-pepperoni-and-monterey-jack-cheese-snack-pack-with-brownie-bites
+      Name: ' Hillshire Farm® SNACKED! Pepperoni and Monterey Jack Cheese Snack Pack with Brownie Bites'
+      Description: >-
+        2 packs, same snacks. Quality Pepperoni, sweet Brownie Bites, and
+        flavorful Monterey Jack Cheese come together in this delicious on-the-go
+        snack.
+      QuantityMultiplier: 1
+      ShipWeight: null
+      ShipHeight: null
+      ShipWidth: null
+      ShipLength: null
+      Active: true
+      SpecCount: 0
+      VariantCount: 0
+      ShipFromAddressID: null
+      Inventory:
+        Enabled: false
+        NotificationPoint: null
+        VariantLevelTracking: false
+        OrderCanExceed: false
+        QuantityAvailable: 20
+        LastUpdated: '2022-10-14T11:11:04.663+00:00'
+      DefaultSupplierID: null
+      AllSuppliersCanSell: false
+      Returnable: false
+      xp:
+        image:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745857/roqaoiqgi2dhpt5fbjdp.png
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745857/roqaoiqgi2dhpt5fbjdp.png
+          id: roqaoiqgi2dhpt5fbjdp
+        unit: 1 Unit
+        product_type: simple
+        price: 5.31
+        sku: '1'
+        gallery: []
+        slug: >-
+          hillshire-farm-snacked-pepperoni-and-monterey-jack-cheese-snack-pack-with-brownie-bites
+        is_taxable: 0
+    - OwnerID: <MarketplaceID placeholder>
+      DefaultPriceScheduleID: >-
+        hillshire-farm-snacked-hard-salami-with-pretzel-rods-and-monterey-jack-cheese-snack-pack
+      AutoForward: false
+      ID: >-
+        hillshire-farm-snacked-hard-salami-with-pretzel-rods-and-monterey-jack-cheese-snack-pack
+      Name: >-
+        Hillshire Farm® SNACKED! Hard Salami with Pretzel Rods and Monterey Jack
+        Cheese Snack Pack
+      Description: >-
+        2 packs, same snacks. Quality Hard Salami, sweet Pretzel Rods, and
+        classic Monterey Jack Cheese come together in this delicious on-the-go
+        snack.
+      QuantityMultiplier: 1
+      ShipWeight: null
+      ShipHeight: null
+      ShipWidth: null
+      ShipLength: null
+      Active: true
+      SpecCount: 0
+      VariantCount: 0
+      ShipFromAddressID: null
+      Inventory:
+        Enabled: false
+        NotificationPoint: null
+        VariantLevelTracking: false
+        OrderCanExceed: false
+        QuantityAvailable: 19
+        LastUpdated: '2022-10-14T11:14:22+00:00'
+      DefaultSupplierID: null
+      AllSuppliersCanSell: false
+      Returnable: false
+      xp:
+        image:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665746057/ymxesawydfkzpagzfip5.png
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665746057/ymxesawydfkzpagzfip5.png
+          id: ymxesawydfkzpagzfip5
+        unit: 1 Unit
+        product_type: simple
+        price: 5.2
+        sku: '1'
+        gallery: []
+        slug: >-
+          hillshire-farm-snacked-hard-salami-with-pretzel-rods-and-monterey-jack-cheese-snack-pack
+        is_taxable: 0
+    - OwnerID: <MarketplaceID placeholder>
+      DefaultPriceScheduleID: >-
+        hillshire-farm-snacked-pepperoni-and-mini-string-cheese-snack-pack-with-confetti-cake-bites
+      AutoForward: false
+      ID: >-
+        hillshire-farm-snacked-pepperoni-and-mini-string-cheese-snack-pack-with-confetti-cake-bites
+      Name: >-
+        Hillshire Farm® SNACKED! Pepperoni and Mini String Cheese Snack Pack
+        with Confetti Cake Bites
+      Description: >-
+        2 packs, same snacks. Tasty Pepperoni, sweet Confetti Cake Bites, and
+        quality Mini String Cheese make a delicious, protein-packed snack.
+      QuantityMultiplier: 1
+      ShipWeight: null
+      ShipHeight: null
+      ShipWidth: null
+      ShipLength: null
+      Active: true
+      SpecCount: 0
+      VariantCount: 0
+      ShipFromAddressID: null
+      Inventory:
+        Enabled: false
+        NotificationPoint: null
+        VariantLevelTracking: false
+        OrderCanExceed: false
+        QuantityAvailable: 19
+        LastUpdated: '2022-10-14T11:05:14.2+00:00'
+      DefaultSupplierID: null
+      AllSuppliersCanSell: false
+      Returnable: false
+      xp:
+        image:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745364/ie6dwkmymus9xjz5zah3.png
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745364/ie6dwkmymus9xjz5zah3.png
+          id: ie6dwkmymus9xjz5zah3
+        unit: 1 Unit
+        product_type: simple
+        price: 5.1
+        sku: '1'
+        gallery: []
+        slug: >-
+          hillshire-farm-snacked-pepperoni-and-mini-string-cheese-snack-pack-with-confetti-cake-bites
+        is_taxable: 0
+    - OwnerID: <MarketplaceID placeholder>
+      DefaultPriceScheduleID: cheddarwurst-smoked-sausage-bratwurst
+      AutoForward: false
+      ID: cheddarwurst-smoked-sausage-bratwurst
+      Name: Cheddarwurst® Smoked Sausage Bratwurst
+      Description: >-
+        Hillshire Farm Smoked Sausage Links are meticulously slow-cooked by our
+        craftsmen using only quality cuts of meat and spices. Simple, delicious
+        and ready in minutes—these tasty links bring a little farmhouse quality
+        to any backyard barbecue or weekday dinner. Perfectly seasoned and
+        smoked to perfection, prepare this cheddarwurst sausage links using a
+        grill, stove top or microwave. For a tasty meal the whole family can
+        enjoy, grill these delicious sausage links and serve with caramelized
+        onions and Dijon mustard on a toasted bun. Includes one package of
+        Hillshire Farm Cheddarwurst Smoked Sausage Links (6 Count). Hard work.
+        Dedication. Integrity. These are the values we live by—and the
+        ingredients we put into every package of Hillshire Farm Smoked Sausage
+        Links. Since 1934, the Hillshire Farm Brand has stood for the honest,
+        carefully crafted meats your family loves, made with the ingredients
+        they deserve. And we’re confident you’ll taste our commitment to quality
+        in every bite.
+
+        One package of Hillshire Farm Cheddarwurst Smoked Sausage Links (6
+        Count)
+
+        Perfectly seasoned and smoked to perfection;
+
+        Made with 100% Premium Pork;
+
+        Great for meals the whole family can enjoy;
+
+        Fully cooked and ready in minutes;
+
+        Simply prepare using grill, stove top or microwave;
+      QuantityMultiplier: 1
+      ShipWeight: null
+      ShipHeight: null
+      ShipWidth: null
+      ShipLength: null
+      Active: true
+      SpecCount: 0
+      VariantCount: 0
+      ShipFromAddressID: null
+      Inventory:
+        Enabled: false
+        NotificationPoint: null
+        VariantLevelTracking: false
+        OrderCanExceed: false
+        QuantityAvailable: 18
+        LastUpdated: '2022-10-14T11:13:51.4+00:00'
+      DefaultSupplierID: null
+      AllSuppliersCanSell: false
+      Returnable: false
+      xp:
+        image:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745818/itiu5uwygjjwqciousyh.webp
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745818/itiu5uwygjjwqciousyh.webp
+          id: itiu5uwygjjwqciousyh
+        unit: 1 unit
+        product_type: simple
+        price: 5.25
+        sku: '1'
+        gallery: []
+        slug: cheddarwurst-smoked-sausage-bratwurst
+        is_taxable: 0
+    - OwnerID: <MarketplaceID placeholder>
+      DefaultPriceScheduleID: cajun-style-andouille-smoked-sausage
+      AutoForward: false
+      ID: cajun-style-andouille-smoked-sausage
+      Name: ' Cajun Style Andouille Smoked Sausage'
+      Description: >-
+        Made with quality cuts of meat, taste the rich flavors packed with
+        Cajun-style spice.
+      QuantityMultiplier: 1
+      ShipWeight: null
+      ShipHeight: null
+      ShipWidth: null
+      ShipLength: null
+      Active: true
+      SpecCount: 0
+      VariantCount: 0
+      ShipFromAddressID: null
+      Inventory:
+        Enabled: false
+        NotificationPoint: null
+        VariantLevelTracking: false
+        OrderCanExceed: false
+        QuantityAvailable: 20
+        LastUpdated: '2022-10-14T10:58:30.06+00:00'
+      DefaultSupplierID: null
+      AllSuppliersCanSell: false
+      Returnable: false
+      xp:
+        image:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745094/nbmdqxknlo9ghmc9uybf.webp
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745094/nbmdqxknlo9ghmc9uybf.webp
+          id: nbmdqxknlo9ghmc9uybf
+        unit: 1 Unit
+        product_type: simple
+        price: 33.6
+        sku: '1'
+        gallery: []
+        slug: cajun-style-andouille-smoked-sausage
+        is_taxable: 0
+    - OwnerID: <MarketplaceID placeholder>
+      DefaultPriceScheduleID: beef-polska-kielbasa
+      AutoForward: false
+      ID: beef-polska-kielbasa
+      Name: Beef Polska Kielbasa
+      Description: ' This smoked sausage is fully cooked, made from quality cuts of beef and seasoned with flavorful spices.'
+      QuantityMultiplier: 1
+      ShipWeight: null
+      ShipHeight: null
+      ShipWidth: null
+      ShipLength: null
+      Active: true
+      SpecCount: 0
+      VariantCount: 0
+      ShipFromAddressID: null
+      Inventory:
+        Enabled: false
+        NotificationPoint: null
+        VariantLevelTracking: false
+        OrderCanExceed: false
+        QuantityAvailable: 16
+        LastUpdated: '2022-10-14T10:59:45.423+00:00'
+      DefaultSupplierID: null
+      AllSuppliersCanSell: false
+      Returnable: false
+      xp:
+        image:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745179/xytugbvzrbambhaohvbn.webp
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745179/xytugbvzrbambhaohvbn.webp
+          id: xytugbvzrbambhaohvbn
+        unit: '1'
+        product_type: simple
+        price: 31
+        sku: '1'
+        gallery: []
+        slug: beef-polska-kielbasa
+        is_taxable: 0
+    - OwnerID: <MarketplaceID placeholder>
+      DefaultPriceScheduleID: beef-smoked-sausage
+      AutoForward: false
+      ID: beef-smoked-sausage
+      Name: Beef Smoked Sausage
+      Description: >-
+        Our beef smoked sausage is fully cooked with flavorful spices using
+        quality cuts of beef.
+      QuantityMultiplier: 1
+      ShipWeight: null
+      ShipHeight: null
+      ShipWidth: null
+      ShipLength: null
+      Active: true
+      SpecCount: 0
+      VariantCount: 0
+      ShipFromAddressID: null
+      Inventory:
+        Enabled: false
+        NotificationPoint: null
+        VariantLevelTracking: false
+        OrderCanExceed: false
+        QuantityAvailable: 20
+        LastUpdated: '2022-10-14T11:00:52.3+00:00'
+      DefaultSupplierID: null
+      AllSuppliersCanSell: false
+      Returnable: false
+      xp:
+        image:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745248/xqieeymofzd5mx5be9vp.webp
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745248/xqieeymofzd5mx5be9vp.webp
+          id: xqieeymofzd5mx5be9vp
+        unit: 1 Unit
+        product_type: simple
+        price: 36
+        sku: '1'
+        gallery: []
+        slug: beef-smoked-sausage
+        is_taxable: 0
+    - OwnerID: <MarketplaceID placeholder>
+      DefaultPriceScheduleID: >-
+        hillshire-farm-snacked-turkey-with-chocolate-chip-cookies-and-cheddar-cheese-snack-pack
+      AutoForward: false
+      ID: >-
+        hillshire-farm-snacked-turkey-with-chocolate-chip-cookies-and-cheddar-cheese-snack-pack
+      Name: >-
+        Hillshire Farm® SNACKED! Turkey with Chocolate Chip Cookies and Cheddar
+        Cheese Snack Pack
+      Description: ' 2 packs, same snacks. Tasty Turkey, classic Chocolate Chip Cookies, and savory Cheddar Cheese make a delicious, on-the-go snack'
+      QuantityMultiplier: 1
+      ShipWeight: null
+      ShipHeight: null
+      ShipWidth: null
+      ShipLength: null
+      Active: true
+      SpecCount: 0
+      VariantCount: 0
+      ShipFromAddressID: null
+      Inventory:
+        Enabled: false
+        NotificationPoint: null
+        VariantLevelTracking: false
+        OrderCanExceed: false
+        QuantityAvailable: 20
+        LastUpdated: '2022-10-14T11:09:03.567+00:00'
+      DefaultSupplierID: null
+      AllSuppliersCanSell: false
+      Returnable: false
+      xp:
+        image:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745731/e1wlnffzo1aynlizixtr.png
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745731/e1wlnffzo1aynlizixtr.png
+          id: e1wlnffzo1aynlizixtr
+        unit: 1 Unit
+        product_type: simple
+        price: 5.52
+        sku: '1'
+        gallery: []
+        slug: >-
+          hillshire-farm-snacked-turkey-with-chocolate-chip-cookies-and-cheddar-cheese-snack-pack
+        is_taxable: 0
+    - OwnerID: <MarketplaceID placeholder>
+      DefaultPriceScheduleID: oven-roasted-turkey-honey-ham-variety-pack
+      AutoForward: false
+      ID: oven-roasted-turkey-honey-ham-variety-pack
+      Name: Oven Roasted Turkey & Honey Ham Variety Pack
+      Description: |2-
+         Make your sandwich with thin sliced honey roast ham for a hearty lunch with a touch of sweetness. 
+                  Carefully crafted meals deserve the highest-quality ingredients: now made with no artificial preservatives, no added nitrates and nitrites* and no artificial flavors.
+      QuantityMultiplier: 1
+      ShipWeight: null
+      ShipHeight: null
+      ShipWidth: null
+      ShipLength: null
+      Active: true
+      SpecCount: 0
+      VariantCount: 0
+      ShipFromAddressID: null
+      Inventory:
+        Enabled: false
+        NotificationPoint: null
+        VariantLevelTracking: false
+        OrderCanExceed: false
+        QuantityAvailable: 15
+        LastUpdated: '2022-10-14T11:07:01.383+00:00'
+      DefaultSupplierID: null
+      AllSuppliersCanSell: false
+      Returnable: false
+      xp:
+        image:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745609/pckgtctg4qvdw0wcsdub.webp
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745609/pckgtctg4qvdw0wcsdub.webp
+          id: pckgtctg4qvdw0wcsdub
+        unit: '1'
+        product_type: simple
+        price: 5.3
+        sku: '1'
+        gallery: []
+        slug: oven-roasted-turkey-honey-ham-variety-pack
+        is_taxable: 0
+    - OwnerID: <MarketplaceID placeholder>
+      DefaultPriceScheduleID: carved-oven-roasted-turkey-breast-lunch-meat
+      AutoForward: false
+      ID: carved-oven-roasted-turkey-breast-lunch-meat
+      Name: Carved Oven Roasted Turkey Breast Lunch Meat
+      Description: ' This ham is thick cut, slow roasted and all-natural. Perfect for any snack, sandwich or salad occasion and always made without any artificial ingredients, artificial preservatives or nitrates.'
+      QuantityMultiplier: 1
+      ShipWeight: null
+      ShipHeight: null
+      ShipWidth: null
+      ShipLength: null
+      Active: true
+      SpecCount: 0
+      VariantCount: 0
+      ShipFromAddressID: null
+      Inventory:
+        Enabled: false
+        NotificationPoint: null
+        VariantLevelTracking: false
+        OrderCanExceed: false
+        QuantityAvailable: 16
+        LastUpdated: '2022-10-14T11:01:39.653+00:00'
+      DefaultSupplierID: null
+      AllSuppliersCanSell: false
+      Returnable: false
+      xp:
+        image:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745292/gw3u1l9dafntlcup8jcm.webp
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665745292/gw3u1l9dafntlcup8jcm.webp
+          id: gw3u1l9dafntlcup8jcm
+        unit: '1'
+        product_type: simple
+        price: 5.53
+        sku: '1'
+        gallery: []
+        slug: carved-oven-roasted-turkey-breast-lunch-meat
+        is_taxable: 0
+    - OwnerID: <MarketplaceID placeholder>
+      DefaultPriceScheduleID: thin-sliced-oven-roasted-turkey-breast
+      AutoForward: false
+      ID: thin-sliced-oven-roasted-turkey-breast
+      Name: Thin Sliced Oven Roasted Turkey Breast
+      Description: >-
+        Experience the taste of a home-style meal on a sandwich with
+        slow-cooked, oven roasted, thin sliced turkey.
+                  Carefully crafted meals deserve the highest-quality ingredients: now made with no artificial preservatives, no added nitrates and nitrites* and no artificial flavors.
+      QuantityMultiplier: 1
+      ShipWeight: null
+      ShipHeight: null
+      ShipWidth: null
+      ShipLength: null
+      Active: true
+      SpecCount: 0
+      VariantCount: 0
+      ShipFromAddressID: null
+      Inventory:
+        Enabled: false
+        NotificationPoint: null
+        VariantLevelTracking: false
+        OrderCanExceed: false
+        QuantityAvailable: 17
+        LastUpdated: '2022-10-14T11:14:53.703+00:00'
+      DefaultSupplierID: null
+      AllSuppliersCanSell: false
+      Returnable: false
+      xp:
+        image:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665746088/jdpva3bcceb2l0faqdcs.webp
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665746088/jdpva3bcceb2l0faqdcs.webp
+          id: jdpva3bcceb2l0faqdcs
+        unit: 1 unit
+        product_type: simple
+        price: 5.25
+        sku: '1'
+        gallery: []
+        slug: thin-sliced-oven-roasted-turkey-breast
+        is_taxable: 0
+    - OwnerID: <MarketplaceID placeholder>
+      DefaultPriceScheduleID: ultra-thin-sliced-honey-ham-lunch-meat
+      AutoForward: false
+      ID: ultra-thin-sliced-honey-ham-lunch-meat
+      Name: Ultra Thin Sliced Honey Ham Lunch Meat
+      Description: >-
+        Make your sandwich with thin sliced honey roast ham for a hearty lunch
+        with a touch of sweetness. 
+                  Carefully crafted meals deserve the highest-quality ingredients: now made with no artificial preservatives, no added nitrates and nitrites* and no artificial flavors.
+      QuantityMultiplier: 1
+      ShipWeight: null
+      ShipHeight: null
+      ShipWidth: null
+      ShipLength: null
+      Active: true
+      SpecCount: 0
+      VariantCount: 0
+      ShipFromAddressID: null
+      Inventory:
+        Enabled: false
+        NotificationPoint: null
+        VariantLevelTracking: false
+        OrderCanExceed: false
+        QuantityAvailable: 23
+        LastUpdated: '2022-10-14T11:15:44.883+00:00'
+      DefaultSupplierID: null
+      AllSuppliersCanSell: false
+      Returnable: false
+      xp:
+        image:
+          thumbnail: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665746140/nfp25hzog6f1xgrgcr8o.webp
+          original: >-
+            https://res.cloudinary.com/dve197bop/image/upload/q_auto:eco/v1665746140/nfp25hzog6f1xgrgcr8o.webp
+          id: nfp25hzog6f1xgrgcr8o
+        unit: '1'
+        product_type: simple
+        price: 6.5
+        sku: '1'
+        gallery: []
+        slug: ultra-thin-sliced-honey-ham-lunch-meat
+        is_taxable: 0
+  PriceSchedules:
+    - OwnerID: <MarketplaceID placeholder>
+      ID: beef-polska-kielbasa
+      Name: Beef Polska Kielbasa
+      ApplyTax: true
+      ApplyShipping: true
+      MinQuantity: 1
+      MaxQuantity: null
+      UseCumulativeQuantity: false
+      RestrictedQuantity: false
+      PriceBreaks:
+        - Quantity: 1
+          Price: 31
+          SalePrice: null
+      Currency: null
+      SaleStart: null
+      SaleEnd: null
+      IsOnSale: false
+      xp: null
+    - OwnerID: <MarketplaceID placeholder>
+      ID: beef-smoked-sausage
+      Name: Beef Smoked Sausage
+      ApplyTax: true
+      ApplyShipping: true
+      MinQuantity: 1
+      MaxQuantity: null
+      UseCumulativeQuantity: false
+      RestrictedQuantity: false
+      PriceBreaks:
+        - Quantity: 1
+          Price: 36
+          SalePrice: null
+      Currency: null
+      SaleStart: null
+      SaleEnd: null
+      IsOnSale: false
+      xp: null
+    - OwnerID: <MarketplaceID placeholder>
+      ID: cajun-style-andouille-smoked-sausage
+      Name: ' Cajun Style Andouille Smoked Sausage'
+      ApplyTax: true
+      ApplyShipping: true
+      MinQuantity: 1
+      MaxQuantity: null
+      UseCumulativeQuantity: false
+      RestrictedQuantity: false
+      PriceBreaks:
+        - Quantity: 1
+          Price: 33.6
+          SalePrice: null
+      Currency: null
+      SaleStart: null
+      SaleEnd: null
+      IsOnSale: false
+      xp: null
+    - OwnerID: <MarketplaceID placeholder>
+      ID: carved-oven-roasted-turkey-breast-lunch-meat
+      Name: Carved Oven Roasted Turkey Breast Lunch Meat
+      ApplyTax: true
+      ApplyShipping: true
+      MinQuantity: 1
+      MaxQuantity: null
+      UseCumulativeQuantity: false
+      RestrictedQuantity: false
+      PriceBreaks:
+        - Quantity: 1
+          Price: 5.53
+          SalePrice: null
+      Currency: null
+      SaleStart: null
+      SaleEnd: null
+      IsOnSale: false
+      xp: null
+    - OwnerID: <MarketplaceID placeholder>
+      ID: cheddarwurst-smoked-sausage-bratwurst
+      Name: Cheddarwurst® Smoked Sausage Bratwurst
+      ApplyTax: true
+      ApplyShipping: true
+      MinQuantity: 1
+      MaxQuantity: null
+      UseCumulativeQuantity: false
+      RestrictedQuantity: false
+      PriceBreaks:
+        - Quantity: 1
+          Price: 5.25
+          SalePrice: null
+      Currency: null
+      SaleStart: null
+      SaleEnd: null
+      IsOnSale: false
+      xp: null
+    - OwnerID: <MarketplaceID placeholder>
+      ID: >-
+        hillshire-farm-snacked-hard-salami-with-pretzel-rods-and-monterey-jack-cheese-snack-pack
+      Name: >-
+        Hillshire Farm® SNACKED! Hard Salami with Pretzel Rods and Monterey Jack
+        Cheese Snack Pack
+      ApplyTax: true
+      ApplyShipping: true
+      MinQuantity: 1
+      MaxQuantity: null
+      UseCumulativeQuantity: false
+      RestrictedQuantity: false
+      PriceBreaks:
+        - Quantity: 1
+          Price: 5.2
+          SalePrice: null
+      Currency: null
+      SaleStart: null
+      SaleEnd: null
+      IsOnSale: false
+      xp: null
+    - OwnerID: <MarketplaceID placeholder>
+      ID: >-
+        hillshire-farm-snacked-pepperoni-and-mini-string-cheese-snack-pack-with-confetti-cake-bites
+      Name: >-
+        Hillshire Farm® SNACKED! Pepperoni and Mini String Cheese Snack Pack
+        with Confetti Cake Bites
+      ApplyTax: true
+      ApplyShipping: true
+      MinQuantity: 1
+      MaxQuantity: null
+      UseCumulativeQuantity: false
+      RestrictedQuantity: false
+      PriceBreaks:
+        - Quantity: 1
+          Price: 5.1
+          SalePrice: null
+      Currency: null
+      SaleStart: null
+      SaleEnd: null
+      IsOnSale: false
+      xp: null
+    - OwnerID: <MarketplaceID placeholder>
+      ID: >-
+        hillshire-farm-snacked-pepperoni-and-monterey-jack-cheese-snack-pack-with-brownie-bites
+      Name: ' Hillshire Farm® SNACKED! Pepperoni and Monterey Jack Cheese Snack Pack with Brownie Bites'
+      ApplyTax: true
+      ApplyShipping: true
+      MinQuantity: 1
+      MaxQuantity: null
+      UseCumulativeQuantity: false
+      RestrictedQuantity: false
+      PriceBreaks:
+        - Quantity: 1
+          Price: 5.31
+          SalePrice: null
+      Currency: null
+      SaleStart: null
+      SaleEnd: null
+      IsOnSale: false
+      xp: null
+    - OwnerID: <MarketplaceID placeholder>
+      ID: >-
+        hillshire-farm-snacked-turkey-with-chocolate-chip-cookies-and-cheddar-cheese-snack-pack
+      Name: >-
+        Hillshire Farm® SNACKED! Turkey with Chocolate Chip Cookies and Cheddar
+        Cheese Snack Pack
+      ApplyTax: true
+      ApplyShipping: true
+      MinQuantity: 1
+      MaxQuantity: null
+      UseCumulativeQuantity: false
+      RestrictedQuantity: false
+      PriceBreaks:
+        - Quantity: 1
+          Price: 5.52
+          SalePrice: null
+      Currency: null
+      SaleStart: null
+      SaleEnd: null
+      IsOnSale: false
+      xp: null
+    - OwnerID: <MarketplaceID placeholder>
+      ID: oven-roasted-turkey-honey-ham-variety-pack
+      Name: Oven Roasted Turkey & Honey Ham Variety Pack
+      ApplyTax: true
+      ApplyShipping: true
+      MinQuantity: 1
+      MaxQuantity: null
+      UseCumulativeQuantity: false
+      RestrictedQuantity: false
+      PriceBreaks:
+        - Quantity: 1
+          Price: 5.3
+          SalePrice: null
+      Currency: null
+      SaleStart: null
+      SaleEnd: null
+      IsOnSale: false
+      xp: null
+    - OwnerID: <MarketplaceID placeholder>
+      ID: thin-sliced-oven-roasted-turkey-breast
+      Name: Thin Sliced Oven Roasted Turkey Breast
+      ApplyTax: true
+      ApplyShipping: true
+      MinQuantity: 1
+      MaxQuantity: null
+      UseCumulativeQuantity: false
+      RestrictedQuantity: false
+      PriceBreaks:
+        - Quantity: 1
+          Price: 5.25
+          SalePrice: null
+      Currency: null
+      SaleStart: null
+      SaleEnd: null
+      IsOnSale: false
+      xp: null
+    - OwnerID: <MarketplaceID placeholder>
+      ID: ultra-thin-sliced-honey-ham-lunch-meat
+      Name: Ultra Thin Sliced Honey Ham Lunch Meat
+      ApplyTax: true
+      ApplyShipping: true
+      MinQuantity: 1
+      MaxQuantity: null
+      UseCumulativeQuantity: false
+      RestrictedQuantity: false
+      PriceBreaks:
+        - Quantity: 1
+          Price: 6.5
+          SalePrice: null
+      Currency: null
+      SaleStart: null
+      SaleEnd: null
+      IsOnSale: false
+      xp: null
+  Specs: []
+  SpecOptions: []
+  ProductFacets: []
+  Promotions: []
+Assignments:
+  UserGroupAssignments: []
+  SpendingAccountAssignments: []
+  AddressAssignments: []
+  CostCenterAssignments: []
+  CreditCardAssignments: []
+  CategoryAssignments:
+    - CategoryID: deli-lunch-meats
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      Visible: true
+      ViewAllProducts: true
+      CatalogID: hillshire-farm
+    - CategoryID: kids-snacks
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      Visible: true
+      ViewAllProducts: true
+      CatalogID: hillshire-farm
+    - CategoryID: smoked-sausages
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      Visible: true
+      ViewAllProducts: true
+      CatalogID: hillshire-farm
+  CategoryProductAssignments:
+    - CategoryID: smoked-sausages
+      ProductID: beef-polska-kielbasa
+      ListOrder: null
+      CatalogID: hillshire-farm
+    - CategoryID: smoked-sausages
+      ProductID: beef-smoked-sausage
+      ListOrder: null
+      CatalogID: hillshire-farm
+    - CategoryID: smoked-sausages
+      ProductID: cajun-style-andouille-smoked-sausage
+      ListOrder: null
+      CatalogID: hillshire-farm
+    - CategoryID: deli-lunch-meats
+      ProductID: carved-oven-roasted-turkey-breast-lunch-meat
+      ListOrder: null
+      CatalogID: hillshire-farm
+    - CategoryID: smoked-sausages
+      ProductID: cheddarwurst-smoked-sausage-bratwurst
+      ListOrder: null
+      CatalogID: hillshire-farm
+    - CategoryID: kids-snacks
+      ProductID: >-
+        hillshire-farm-snacked-hard-salami-with-pretzel-rods-and-monterey-jack-cheese-snack-pack
+      ListOrder: null
+      CatalogID: hillshire-farm
+    - CategoryID: kids-snacks
+      ProductID: >-
+        hillshire-farm-snacked-pepperoni-and-mini-string-cheese-snack-pack-with-confetti-cake-bites
+      ListOrder: null
+      CatalogID: hillshire-farm
+    - CategoryID: kids-snacks
+      ProductID: >-
+        hillshire-farm-snacked-pepperoni-and-monterey-jack-cheese-snack-pack-with-brownie-bites
+      ListOrder: null
+      CatalogID: hillshire-farm
+    - CategoryID: kids-snacks
+      ProductID: >-
+        hillshire-farm-snacked-turkey-with-chocolate-chip-cookies-and-cheddar-cheese-snack-pack
+      ListOrder: null
+      CatalogID: hillshire-farm
+    - CategoryID: deli-lunch-meats
+      ProductID: oven-roasted-turkey-honey-ham-variety-pack
+      ListOrder: null
+      CatalogID: hillshire-farm
+    - CategoryID: deli-lunch-meats
+      ProductID: thin-sliced-oven-roasted-turkey-breast
+      ListOrder: null
+      CatalogID: hillshire-farm
+    - CategoryID: deli-lunch-meats
+      ProductID: ultra-thin-sliced-honey-ham-lunch-meat
+      ListOrder: null
+      CatalogID: hillshire-farm
+  SecurityProfileAssignments:
+    - SecurityProfileID: anonymous-shopper
+      BuyerID: tyson
+      SupplierID: null
+      UserID: null
+      UserGroupID: null
+    - SecurityProfileID: full-access-admin
+      BuyerID: null
+      SupplierID: null
+      UserID: null
+      UserGroupID: null
+  AdminUserGroupAssignments: []
+  ApiClientAssignments:
+    - ApiClientID: 9a3ff470-6db7-47e0-9462-93e6b7b37e37
+      BuyerID: tyson
+      SupplierID: null
+  ProductAssignments:
+    - SellerID: <MarketplaceID placeholder>
+      ProductID: beef-polska-kielbasa
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      PriceScheduleID: null
+    - SellerID: <MarketplaceID placeholder>
+      ProductID: beef-smoked-sausage
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      PriceScheduleID: null
+    - SellerID: <MarketplaceID placeholder>
+      ProductID: cajun-style-andouille-smoked-sausage
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      PriceScheduleID: null
+    - SellerID: <MarketplaceID placeholder>
+      ProductID: carved-oven-roasted-turkey-breast-lunch-meat
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      PriceScheduleID: null
+    - SellerID: <MarketplaceID placeholder>
+      ProductID: cheddarwurst-smoked-sausage-bratwurst
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      PriceScheduleID: null
+    - SellerID: <MarketplaceID placeholder>
+      ProductID: >-
+        hillshire-farm-snacked-hard-salami-with-pretzel-rods-and-monterey-jack-cheese-snack-pack
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      PriceScheduleID: null
+    - SellerID: <MarketplaceID placeholder>
+      ProductID: >-
+        hillshire-farm-snacked-pepperoni-and-mini-string-cheese-snack-pack-with-confetti-cake-bites
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      PriceScheduleID: null
+    - SellerID: <MarketplaceID placeholder>
+      ProductID: >-
+        hillshire-farm-snacked-pepperoni-and-monterey-jack-cheese-snack-pack-with-brownie-bites
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      PriceScheduleID: null
+    - SellerID: <MarketplaceID placeholder>
+      ProductID: >-
+        hillshire-farm-snacked-turkey-with-chocolate-chip-cookies-and-cheddar-cheese-snack-pack
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      PriceScheduleID: null
+    - SellerID: <MarketplaceID placeholder>
+      ProductID: oven-roasted-turkey-honey-ham-variety-pack
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+    - SellerID: <MarketplaceID placeholder>
+      ProductID: thin-sliced-oven-roasted-turkey-breast
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      PriceScheduleID: null
+    - SellerID: <MarketplaceID placeholder>
+      ProductID: ultra-thin-sliced-honey-ham-lunch-meat
+      BuyerID: tyson
+      UserID: null
+      UserGroupID: tyson-shoppers
+      PriceScheduleID: null
+  CatalogAssignments:
+    - CatalogID: hillshire-farm
+      BuyerID: tyson
+      ViewAllCategories: true
+      ViewAllProducts: true
+  ProductCatalogAssignment:
+    - CatalogID: hillshire-farm
+      ProductID: beef-polska-kielbasa
+    - CatalogID: hillshire-farm
+      ProductID: beef-smoked-sausage
+    - CatalogID: hillshire-farm
+      ProductID: cajun-style-andouille-smoked-sausage
+    - CatalogID: hillshire-farm
+      ProductID: carved-oven-roasted-turkey-breast-lunch-meat
+    - CatalogID: hillshire-farm
+      ProductID: cheddarwurst-smoked-sausage-bratwurst
+    - CatalogID: hillshire-farm
+      ProductID: >-
+        hillshire-farm-snacked-hard-salami-with-pretzel-rods-and-monterey-jack-cheese-snack-pack
+    - CatalogID: hillshire-farm
+      ProductID: >-
+        hillshire-farm-snacked-pepperoni-and-mini-string-cheese-snack-pack-with-confetti-cake-bites
+    - CatalogID: hillshire-farm
+      ProductID: >-
+        hillshire-farm-snacked-pepperoni-and-monterey-jack-cheese-snack-pack-with-brownie-bites
+    - CatalogID: hillshire-farm
+      ProductID: >-
+        hillshire-farm-snacked-turkey-with-chocolate-chip-cookies-and-cheddar-cheese-snack-pack
+    - CatalogID: hillshire-farm
+      ProductID: oven-roasted-turkey-honey-ham-variety-pack
+    - CatalogID: hillshire-farm
+      ProductID: thin-sliced-oven-roasted-turkey-breast
+    - CatalogID: hillshire-farm
+      ProductID: ultra-thin-sliced-honey-ham-lunch-meat
+  SpecProductAssignments: []
+  PromotionAssignment: []

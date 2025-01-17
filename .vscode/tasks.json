@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "func",
+      "label": "func: host start",
+      "command": "host start",
+      "problemMatcher": "$func-node-watch",
+      "isBackground": true,
+      "dependsOn": "yarn build (functions)",
+      "options": {
+        "cwd": "${workspaceFolder}/smartbazar\\api\\rest"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "yarn build (functions)",
+      "command": "yarn azure-build",
+      "dependsOn": "yarn install (functions)",
+      "problemMatcher": "$tsc",
+      "options": {
+        "cwd": "${workspaceFolder}/smartbazar"
+      }
+    },
+    {
+      "type": "shell",
+      "label": "yarn install (functions)",
+      "command": "yarn install",
+      "options": {
+        "cwd": "${workspaceFolder}/smartbazar"
+      }
+    }
+    // {
+    //   "type": "shell",
+    //   "label": "npm prune (functions)",
+    //   "command": "npm prune --production",
+    //   "dependsOn": "yarn build (functions)",
+    //   "problemMatcher": [],
+    //   "options": {
+    //     "cwd": "${workspaceFolder}/smartbazar\\api\\rest"
+    //   }
+    // }
+  ]
+}
