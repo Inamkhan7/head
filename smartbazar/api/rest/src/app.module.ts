@@ -29,7 +29,7 @@ import { ManufacturersModule } from './manufacturers/manufacturers.module';
 import { NewslettersModule } from './newsletters/newsletters.module';
 import { CustomerModule } from './customer/customer.module';
 import { AuthGuard } from './auth/auth.guard';
-import { AiChat } from 'aichat/aichat.module';
+// import { AiChat } from 'aichat/aichat.module';
 
 @Module({
   imports: [
@@ -65,8 +65,8 @@ import { AiChat } from 'aichat/aichat.module';
     RefundsModule,
     AuthorsModule,
     ManufacturersModule,
-    NewslettersModule,
-    AiChat,
+    NewslettersModule
+    // AiChat,
   ],
   controllers: [],
   providers: [
